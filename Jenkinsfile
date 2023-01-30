@@ -4,11 +4,11 @@ pipeline{
         buildDiscarder(logRotator(numToKeepStr: '5', daysToKeepStr: '5'))
         timestamps()
     }
-//     environment{
+    environment{
         
-//         registry = "<dockerhub-username>/<repo-name>"
-//         registryCredential = '<dockerhub-credential-name>'        
-//     }
+        registry = "frontend/dev"
+        registryCredential = '<dockerhub-credential-name>'        
+    }
     
     stages{
        stage('Building image') {
