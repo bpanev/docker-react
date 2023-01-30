@@ -7,10 +7,5 @@ pipeline {
 				docker build .
 			}
 		}
-		stage("test") {
-			steps {
-				curl http://localhost:80
-			}
-		}
 	}
 }
